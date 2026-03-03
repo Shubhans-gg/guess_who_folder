@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Guess Who – Bollywood Edition</title>
+
+<style>
+body {
+    background:#111;
+    color:white;
+    font-family:Arial, sans-serif;
+    text-align:center;
+}
+
+h1 {
+    margin:20px 0;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(9,1fr);
+    gap:14px;
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.card {
+    cursor:pointer;
+}
+
+.card img {
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:filter 0.3s ease;
+}
+
+.card.grayscale img {
+    filter:grayscale(100%);
+}
+
+.name {
+    margin-top:6px;
+    font-size:14px;
+}
+/* 📱 Mobile & small screens */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on phone */
+        gap: 10px;
+    }
+
+    .card img {
+        height: 180px; /* bigger images for tapping */
+    }
+
+    .name {
+        font-size: 16px;
+    }
+}
+
+/* 📱 Very small screens */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns if needed */
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎭 Guess Who – Bollywood Edition</h1>
+
+<div class="grid">
+
+<!-- ROW 1 -->
+<div class="card" onclick="toggle(this)">
+<img loading="lazy"
+ src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Shah_Rukh_Khan_2001.jpg/250px-Shah_Rukh_Khan_2001.jpg">
+<div class="name">Shah Rukh Khan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Salman%20Khan.jpg">
+<div class="name">Salman Khan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aamir%20Khan.jpg">
+<div class="name">Aamir Khan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Akshay%20Kumar.jpg">
+<div class="name">Akshay Kumar</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hrithik%20Roshan.jpg">
+<div class="name">Hrithik Roshan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ranbir%20Kapoor.jpg">
+<div class="name">Ranbir Kapoor</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://artistbookingcompany.com/wp-content/uploads/2024/03/ranveer-singh-680x680.jpg">
+<div class="name">Ranveer Singh</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ajay%20Devgn.jpg">
+<div class="name">Ajay Devgn</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Vicky-Kaushal-promoting-Sardar-Udham-in-New-Delhi.jpg/250px-Vicky-Kaushal-promoting-Sardar-Udham-in-New-Delhi.jpg">
+<div class="name">Vicky Kaushal</div>
+</div>
+
+<!-- ROW 2 -->
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Deepika%20Padukone.jpg">
+<div class="name">Deepika Padukone</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alia%20Bhatt.jpg">
+<div class="name">Alia Bhatt</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Katrina%20Kaif.jpg">
+<div class="name">Katrina Kaif</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Priyanka%20Chopra.jpg">
+<div class="name">Priyanka Chopra</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Anushka%20Sharma.jpg">
+<div class="name">Anushka Sharma</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Kareena_Kapoor_Khan_in_2023_%281%29_%28cropped%29.jpg">
+<div class="name">Kareena Kapoor</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kiara_Advani_snapped_at_the_screening_of_Shershaah_%28cropped%29.jpg/960px-Kiara_Advani_snapped_at_the_screening_of_Shershaah_%28cropped%29.jpg">
+<div class="name">Kiara Advani</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Shraddha%20Kapoor.jpg">
+<div class="name">Shraddha Kapoor</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://assets.vogue.in/photos/601bfddd3514c40d2b37e596/2:3/w_2560%2Cc_limit/jacqueline%2520fernandez%2520makeup%2520skincare.jpg">
+<div class="name">Jacqueline Fernandez</div>
+</div>
+
+<!-- ROW 3 -->
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rajkummar%20Rao.jpg">
+<div class="name">Rajkummar Rao</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ayushmann%20Khurrana.jpg">
+<div class="name">Ayushmann Khurrana</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Varun%20Dhawan.jpg">
+<div class="name">Varun Dhawan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tiger%20Shroff.jpg">
+<div class="name">Tiger Shroff</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://c.ndtvimg.com/2025-01/vu8afo78_kartik-aaryan_625x300_20_January_25.jpg?im=FaceCrop,algorithm=dnn,width=384,height=384">
+<div class="name">Kartik Aaryan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sidharth%20Malhotra.jpg">
+<div class="name">Sidharth Malhotra</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nawazuddin%20Siddiqui.jpg">
+<div class="name">Nawazuddin Siddiqui</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Pankaj%20Tripathi.jpg">
+<div class="name">Pankaj Tripathi</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://resizing.flixster.com/k5TOltAiDMs7JHQYY3un833E8J0=/218x280/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/297976_v9_bc.jpg">
+<div class="name">Irrfan Khan</div>
+</div>
+
+<!-- ROW 4 -->
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbTjfwo-4KG0IKehltKKgJ2lmNWKwfDNOhQw&s">
+<div class="name">Tabu</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://cdn.britannica.com/81/256881-050-1540B4D4/Bollywood-actress-Vidya-Balan-poses-for-a-picture-during-the-promotion-of-her-Indian-Hindi-language-romantic-comedy-film-Do-Aur-Do-Pyaar.jpg">
+<div class="name">Vidya Balan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://image.tmdb.org/t/p/w500/uaY2M3goYsp0QpNenharmIqnMvy.jpg">
+<div class="name">Preity Zinta</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Aishwarya_Rai_2015.jpg">
+<div class="name">Aishwarya Rai</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Anil_Kapoor_1.jpeg/250px-Anil_Kapoor_1.jpeg">
+<div class="name"> Anil Kapoor</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://m.media-amazon.com/images/M/MV5BNTk1OTUxMzIzMV5BMl5BanBnXkFtZTcwMzMxMjI0Nw@@._V1_.jpg">
+<div class="name">Amitabh Bachchan</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://blackhattalent.com/wp-content/uploads/w3-webp/uploads/2024/01/Taapsee-Pannu-On-Pay-Disparity-In-Bollywood1200_62c2ad22bc16d.jpeg-595xh.webp">
+<div class="name">Taapsee Pannu</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Yami%20Gautam.jpg">
+<div class="name">Yami Gautam</div>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kriti%20Sanon.jpg">
+<div class="name">Kriti Sanon</div>
+</div>
+
+</div>
+
+<script>
+function toggle(card) {
+    card.classList.toggle("grayscale");
+}
+</script>
+
+</body>
+</html>
